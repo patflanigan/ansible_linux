@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: local
   connection: local
   become: true
 
@@ -9,3 +9,19 @@
       name:
         - htop
         - tmux
+        - fzf
+
+  - name: copy .bashrc file
+    copy:
+     src: files/bashrc
+     dest: /root/.bashrc
+     owner: root
+     group: root
+
+  - name: copy .fzf.bash file
+    copy:
+     src: files/fzf.bash
+     dest: /root/.fzf.bash
+     owner: root
+     group: root
+
