@@ -25,3 +25,10 @@
      owner: root
      group: root
 
+   - name: Clone fzf
+     git:
+       repo: https://github.com/junegunn/fzf.git
+       dest: /root/~.fzf
+       depth: 1
+       clone: yes
+       update: yes
