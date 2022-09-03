@@ -18,17 +18,10 @@
      owner: root
      group: root
 
-  - name: copy .fzf.bash file
-    copy:
-     src: files/fzf.bash
-     dest: /root/.fzf.bash
-     owner: root
-     group: root
-
-   - name: Clone fzf
+   - name: clone fzf
      git:
        repo: https://github.com/junegunn/fzf.git
        dest: /root/~.fzf
-       depth: 1
        clone: yes
+       depth: 1
        update: yes
