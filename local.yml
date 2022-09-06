@@ -21,7 +21,7 @@
   - name: clone fzf
     git:
      repo: https://github.com/junegunn/fzf.git
-     dest: /root/~.fzf
+     dest: /root/.fzf
      clone: yes
      depth: 1
      update: yes
